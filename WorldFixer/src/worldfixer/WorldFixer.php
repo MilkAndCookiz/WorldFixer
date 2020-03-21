@@ -22,7 +22,7 @@ class WorldFixer extends PluginBase implements Listener{
     public function onEnable(){
         self::$instance = $this;
         $this->getServer()->getCommandMap()->register("WorldFixer", new WorldFixerCommand);
-        $this->getServer()->getScheduler()->scheduleRepeatingTask(new FixTask, 1);
+        $this->getScheduler()->scheduleRepeatingTask(new FixTask, 1);
     }
 
     public static function getInstance() {
